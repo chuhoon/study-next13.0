@@ -9,8 +9,12 @@ $section-padding-top: 8px;
   height: 100%;
   z-index: 101;
 
+  display: flex;
+  flex-direction: column;
+
   padding: $section-padding-top 16px 16px;
   background-color: white;
+  color: #444444;
 
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
@@ -66,5 +70,72 @@ $section-padding-top: 8px;
     margin: 4px 0;
     font-size: 1rem;
     font-weight: 500;
+  }
+}
+
+.detailContent {
+  height: 100%;
+  overflow: hidden;
+  &.expanded {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 8px 0;
+  }
+
+  hr {
+    border-bottom: none;
+    border-top: 1px solid #eef0f3;
+    margin: 16px 0;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 120px));
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    p {
+      margin: 4px 0;
+    }
+  }
+
+  .basicInfo {
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      span {
+        margin-left: 4px;
+        font-size: 1rem;
+      }
+
+      a {
+        color: #64c0a9;
+      }
+    }
+  }
+
+  .menus {
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+
+      .name {
+        max-width: 70%;
+        word-break: keep-all;
+      }
+    }
   }
 }
