@@ -26,6 +26,7 @@ const DetailContent = ({ currentStore, expanded }: Props) => {
               alt=""
               fill
               style={{ objectFit: 'cover' }}
+              sizes="120px"
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO0WhFsDwADzwF2mLYSJgAAAABJRU5ErkJggg=="
             />
