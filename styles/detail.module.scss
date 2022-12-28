@@ -34,6 +34,7 @@ $section-padding-top: 8px;
 
 .header {
   height: $header-height;
+  margin-bottom: 8px;
 
   display: flex;
   flex-direction: column;
@@ -70,6 +71,12 @@ $section-padding-top: 8px;
     margin: 4px 0;
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .flexRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
