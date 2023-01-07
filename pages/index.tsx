@@ -24,6 +24,9 @@ const Home: NextPage<Props> = ({ stores }) => {
         title="매장 지도"
         description="Next.js 시작하기 강의를 위한 매장 지도 서비스입니다."
         canonical="https://inflearn-nextjs.vercel.app"
+        openGraph={{
+          url: 'https://inflearn-nextjs.vercel.app',
+        }}
       />
       <Header />
       <main

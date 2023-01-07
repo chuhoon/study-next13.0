@@ -17,6 +17,9 @@ export const FeedbackPage: NextPage<Props> = ({ initialFeedbackList }) => {
         title="피드백"
         description="매장 지도 서비스에 대한 피드백을 받습니다."
         canonical="https://inflearn-nextjs.vercel.app/feedback"
+        openGraph={{
+          url: 'https://inflearn-nextjs.vercel.app/feedback',
+        }}
       />
       <Header />
 

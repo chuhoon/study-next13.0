@@ -30,6 +30,9 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
         title={store.name}
         description="Next.js 시작하기 강의를 위한 매장 상세 페이지입니다."
         canonical={`https://inflearn-nextjs.vercel.app/${store.name}`}
+        openGraph={{
+          url: `https://inflearn-nextjs.vercel.app/${store.name}`,
+        }}
       />
       <div className={`${styles.detailSection} ${styles.expanded}`}>
         <DetailHeader
