@@ -1,8 +1,16 @@
 import { Fragment } from 'react';
-import Header from '../components/common/Header';
+import { GetServerSideProps, NextPage } from 'next';
 import { NextSeo } from 'next-seo';
+import Header from '../components/common/Header';
+import FeedbackSection from '../components/feedback/FeedbackSection';
+import type { Feedback } from '../types/feedback';
+import { getFeedbackListFromFirestore } from '../firebase/feedback';
 
-export default function Feedback() {
+interface Props {
+  initialFeedbackList: Feedback[];
+}
+
+export const FeedbackPage: NextPage<Props> = ({ initialFeedbackList }) => {
   return (
     <Fragment>
       <NextSeo
@@ -11,7 +19,27 @@ export default function Feedback() {
         canonical="https://inflearn-nextjs.vercel.app/feedback"
       />
       <Header />
-      <main></main>
+
+      <main
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden',
+          touchAction: 'pinch-zoom',
+        }}
+      >
+        <FeedbackSection initialFeedbackList={initialFeedbackList} />
+      </main>
     </Fragment>
   );
-}
+};
+export default FeedbackPage;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {
+      initialFeedbackList: await getFeedbackListFromFirestore(),
+    },
+  };
+};
