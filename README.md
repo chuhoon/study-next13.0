@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Next.js 시작하기 강의
+
+```bash
+# package 설치
+yarn install 
+# 개발환경 실행
+yarn dev
+```
+
 ## Getting Started
 
 First, run the development server:
