@@ -33,7 +33,7 @@ const DetailHeader = ({ currentStore, expanded, onClickArrow }: Props) => {
             }}
             aria-label="매장 페이지 주소 클립보드 복사"
           >
-            <AiOutlineShareAlt size={20} />
+            <AiOutlineShareAlt size={20} color="#444444" />
           </button>
         </div>
       )}
