@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 /** https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr */
+// dynaminc을 사용해 클라이언트 사이드 렌더링 사용
 const NoSSR = dynamic(() => import('../../components/section1/NoSSR'), {
   ssr: false,
 });
@@ -23,6 +24,10 @@ const Example: NextPage = () => {
       <p>값: {data}</p>
 
       <h1>no SSR</h1>
+      {/* window.innerWidth를 인식하지 못함.
+      브라우저에서만 객체에게 접근 가능
+      따라서 window, documnent를 useEffect 밖에서 사용했을 떄
+      에러가 발생. */}
       <NoSSR />
     </main>
   );
