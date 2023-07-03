@@ -6,6 +6,8 @@ export default function Links() {
   const router = useRouter();
   useEffect(() => {
     router.prefetch('/section1/getStaticProps');
+    // useRouter를 Next Link와 같이 사용 가능하지만 prefetch해주지 않기 때문에 따로 설정해야함.
+    // 따라서 next/link 사용을 권장.
   }, [router]);
 
   return (
