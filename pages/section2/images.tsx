@@ -8,29 +8,29 @@ const Images: NextPage = () => {
   return (
     <main>
       {/* loading check */}
-      {/*<section style={{ height: '500vh' }}>long long content</section>*/}
+      {/* <section style={{ height: '500vh' }}>long long content</section> */}
 
-      <hr style={{ margin: '32px 0' }} />
+      {/* <hr style={{ margin: '32px 0' }} /> */}
 
       {/*<h1>img tag</h1>*/}
 
-      {/*<figure>*/}
-      {/*  <img*/}
-      {/*    src="https://lecture-1.vercel.app/example.jpg"*/}
-      {/*    alt="example"*/}
-      {/*    width={500}*/}
-      {/*    height={100}*/}
-      {/*    https://web.dev/browser-level-image-lazy-loading/ */}
-      {/*    // loading="lazy"*/}
-      {/*  />*/}
-      {/*  <figcaption>example img</figcaption>*/}
-      {/*</figure>*/}
+      {/* lazy loading 사용 이유 불필요한 네트워크를 막기 위해서 보이는 것만 로딩한다. */}
+      {/* <figure>
+        <img
+          src="https://lecture-1.vercel.app/example.jpg"
+          alt="example"
+          width={500}
+          height={100}
+          loading="lazy"
+        />
+        <figcaption>example img</figcaption>
+      </figure>
 
-      {/*<hr style={{ margin: '32px 0' }} />*/}
+      <hr style={{ margin: '32px 0' }} />
 
-      <h1>next/image</h1>
+      <h1>next/image</h1> */}
 
-      <figure>
+      {/* <figure>
         <Image
           src={example}
           alt="v13 image"
@@ -39,9 +39,9 @@ const Images: NextPage = () => {
           // placeholder="blur"
         />
         <figcaption>v13 image</figcaption>
-      </figure>
+      </figure> */}
 
-      <figure>
+      {/* <figure>
         <Image
           src="https://lecture-1.vercel.app/example.jpg"
           alt="v13 image"
@@ -49,15 +49,15 @@ const Images: NextPage = () => {
           height={100}
         />
         <figcaption>v13 image</figcaption>
-      </figure>
+      </figure> */}
 
       {/* ERROR */}
-      {/*<figure>*/}
-      {/*  <Image src="/example.jpg" alt="v13 image" />*/}
-      {/*  <figcaption>v13 image</figcaption>*/}
-      {/*</figure>*/}
+      {/* <figure>
+        <Image src="/example.jpg" alt="v13 image" />
+        <figcaption>v13 image</figcaption>
+      </figure> */}
 
-      <figure style={{ position: 'relative', width: '500px', height: '100px' }}>
+      {/* <figure style={{ position: 'relative', width: '500px', height: '100px' }}>
         <Image
           src="https://lecture-1.vercel.app/example.jpg"
           alt="v13 fill"
@@ -68,13 +68,13 @@ const Images: NextPage = () => {
 
       <hr style={{ margin: '32px 0' }} />
 
-      <h1>next/legacy/image</h1>
+      <h1>next/legacy/image</h1> */}
 
       {/** statically import */}
-      <figure>
+      {/* <figure>
         <LegacyImage src={example} alt="example image" />
         <figcaption>intrinsic static image</figcaption>
-      </figure>
+      </figure> */}
 
       {/* ERROR */}
       {/*<figure>*/}
