@@ -12,6 +12,7 @@ body {
   height: 100%;
 }
 
+// __next는 스타일링 하기 어려운 태그 Next에서 만든 태그 display: content로 설정
 @layer base {
   #__next {
     display: contents;
