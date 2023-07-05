@@ -16,6 +16,7 @@ interface Props {
 const Home: NextPage<Props> = ({ stores }) => {
   const { initializeStores } = useStores();
 
+  // SWR 사용 방법 React-Query랑 비슷.
   useEffect(() => {
     initializeStores(stores);
   }, [initializeStores, stores]);
@@ -46,7 +47,12 @@ const Home: NextPage<Props> = ({ stores }) => {
   );
 };
 export default Home;
+// swr은 Next.js를 만든 팀이 만든 상태관리 라이브러리.
+// react-query에 비해 진입 장벽이 낮게 fetch 속도가 빠름.
+// 코드가 경량화 되어 있음.
+// 간단한 프로젝트에서는 SWR이 좋은 선택지일수도 있음.
 
+// mock data 받아오는 함수 getStaticProps
 export async function getStaticProps() {
   /** TODO: next api routes로 불러오기 */
   const stores = (await import('../public/stores.json')).default;
@@ -54,5 +60,6 @@ export async function getStaticProps() {
   return {
     props: { stores },
     revalidate: 60 * 60,
+    // 매장데이터는 빠르게 바뀌는 값이 아니기 때문에 1시간으로 설정
   };
 }
