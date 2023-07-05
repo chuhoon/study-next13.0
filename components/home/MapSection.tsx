@@ -10,6 +10,7 @@ const MapSection = () => {
 
   const onLoadMap = (map: NaverMap) => {
     initializeMap(map);
+    // 마커 밖을 눌렀을 때 클릭 된 마커가 clear되게 됨
     naver.maps.Event.addListener(map, 'click', clearCurrentStore);
   };
 
