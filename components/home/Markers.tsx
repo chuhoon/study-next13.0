@@ -7,6 +7,8 @@ import type { Store } from '../../types/store';
 import Marker from './Marker';
 
 const Markers = () => {
+  // SWR 데이터를 가져오는 방식 각자의 키를 props로 넣으면
+  // 알맞는 data를 가져옴.
   const { data: map } = useSWR<NaverMap>(MAP_KEY);
   const { data: stores } = useSWR<Store[]>(STORE_KEY);
 
